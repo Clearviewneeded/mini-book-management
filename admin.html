@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DomBookApp — Admin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-row">
+      <a class="logo" href="index.html">DomBookApp</a>
+      <nav>
+        <a class="link" href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <h2>Add Book</h2>
+      <form id="add-book-form">
+        <div class="form-row">
+          <label>Title</label>
+          <input id="title" type="text" required />
+        </div>
+        <div class="form-row">
+          <label>Author</label>
+          <input id="author" type="text" required />
+        </div>
+        <div class="form-row">
+          <label>Category</label>
+          <select id="category" required>
+            <option value="">Select category</option>
+            <option>Fiction</option>
+            <option>Comedy</option>
+            <option>Technical</option>
+          </select>
+        </div>
+        <div class="form-row actions-row">
+          <button type="submit" class="btn">Add Book</button>
+          <button id="clear-form" type="button" class="btn ghost">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="controls">
+      <div>
+        <label>Sort:</label>
+        <button id="sort-btn" class="btn ghost">Sort by Title A → Z</button>
+      </div>
+
+      <div>
+        <label>Filter:</label>
+        <select id="filter-select">
+          <option value="All">All</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Technical">Technical</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="center">Books</h3>
+      <div id="books-grid" class="grid"></div>
+      <p id="empty-msg" class="muted center">No books yet — add some using the form above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
